@@ -1,0 +1,28 @@
+#include<stdio.h>
+int main()
+{
+    unsigned n,i,p=1;
+    
+    do
+    {
+        scanf("%d",&n);
+    }
+    while(n<1&&n>1000);
+    
+    long int arr[n];
+    
+    for(i=0;i<n;i++)
+    {
+        do
+        {
+            scanf("%li",&arr[i]);
+        }
+        while(arr[i]<1&&arr[i]>1000);
+    }
+    
+    for(i=0;i<n;i++)
+    {
+        p=(p*arr[i])%(1000000007);
+    }
+    printf("%d",p);
+}
