@@ -1,0 +1,62 @@
+int seat(int n);
+#include<stdio.h>
+int main()
+{
+    int t,s,i;
+    scanf("%d",&t);
+    for(i=0;i<t;i++)
+    {
+        scanf("%d",&s);
+        seat(s);
+    }
+}
+seat(int n)
+{
+	if (n>0&&n<109)
+	{
+		int f=n%12;
+		if (f==1||f==0||f==7||f==6)
+		{
+			switch(f){
+				case 0:{
+				printf("%d ",n-11);
+					    break;}
+				case 1:{printf("%d ",n+11);
+					    break;}
+				case 6:{printf("%d ",n+1);
+					    break;}
+				case 7:{printf("%d ",n-1);
+				        break;}
+			}
+			printf("WS\n");
+		}
+		else if (f==2||f==5||f==8||f==11)
+		{
+			switch(f){
+				case 2:{printf("%d ",n+9);
+					    break;}
+				case 5:{printf("%d ",n+3);
+					    break;}
+				case 8:{printf("%d ",n-3);
+					    break;}
+				case 11:{printf("%d ",n-9);
+				        break;}
+			}
+			printf("MS\n");
+		}
+		else
+		{
+			switch(f){
+				case 3:{printf("%d ",n+7);
+					    break;}
+				case 4:{printf("%d ",n+5);
+					    break;}
+				case 9:{printf("%d ",n-5);
+					    break;}
+				case 10:{printf("%d ",n-7);
+				        break;}
+			}
+			printf("AS\n");
+		}
+	}
+}
