@@ -1,0 +1,17 @@
+#include<stdio.h>
+int main()
+{
+    char s[20];
+    int a=0,b=0,i;
+    scanf("%s",&s);
+    int h=strlen(s);
+    for(i=0;i<h;i++)
+    {
+        if(s[i]=='z'){a=a+1;}
+        if(s[i]=='o'){b=b+1;}
+    }
+    if((2*a)==b)
+    printf("Yes");
+    else 
+    printf("No");
+}
